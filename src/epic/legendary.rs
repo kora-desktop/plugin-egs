@@ -965,7 +965,7 @@ mod cloud_completion_tests {
             &observer,
             connection.unique_name().unwrap().as_str(),
             "/fixture",
-            "one.playtron.plugin.CloudSaveProvider",
+            "inc.kora.plugin.CloudSaveProvider",
         )
         .await
         .unwrap();

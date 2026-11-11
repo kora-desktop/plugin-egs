@@ -1,7 +1,7 @@
 use zbus_macros::DBusError;
 
 #[derive(DBusError, Debug)]
-#[zbus(prefix = "one.playtron.Error")]
+#[zbus(prefix = "inc.kora.Error")]
 pub enum PluginError {
     DiskNotFound,
     DownloadInProgress,

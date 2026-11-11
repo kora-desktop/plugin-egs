@@ -10,7 +10,7 @@ use zbus_macros::interface;
 
 pub struct PluginDependencies {}
 
-#[interface(name = "one.playtron.plugin.PluginDependencies")]
+#[interface(name = "inc.kora.plugin.PluginDependencies")]
 impl PluginDependencies {
     /// Provider property
     #[zbus(property)]

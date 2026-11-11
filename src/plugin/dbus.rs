@@ -45,9 +45,9 @@ pub async fn register_plugin() {
     if let Some(conn) = CONNECTION.lock().await.as_ref() {
         if let Err(error) = conn
             .call_method(
-                Some("one.playtron.Playserve"),
-                "/one/playtron/plugins/Manager",
-                Some("one.playtron.plugin.Manager"),
+                Some("inc.kora.Playserve"),
+                "/inc/kora/plugins/Manager",
+                Some("inc.kora.plugin.Manager"),
                 "RegisterPlugin",
                 &(BUS_NAME, ObjectPath::try_from(CLIENT_PATH).unwrap()),
             )

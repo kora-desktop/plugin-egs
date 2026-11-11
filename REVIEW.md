@@ -1,6 +1,6 @@
 # Review checks
 
-Cloud save methods and signals implement `one.playtron.plugin.CloudSaveProvider`.
+Cloud save methods and signals implement `inc.kora.plugin.CloudSaveProvider`.
 Check the D-Bus payload as well as command exit handling when changing them.
 
 Confirmed consumer: `playtron-os/playserve` decodes these signals in
