@@ -7,7 +7,7 @@ pub struct PortalFlow {
 
 /// Interface for defining how to log in to a provider using a portal flow
 /// where a webview is opened to get an authorization token.
-#[interface(name = "one.playtron.auth.PortalFlow")]
+#[interface(name = "inc.kora.auth.PortalFlow")]
 impl PortalFlow {
     /// Log in to the provider with the given username and password
     ///

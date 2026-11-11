@@ -11,7 +11,7 @@ pub struct CloudSaveProvider {
     pub service: EpicService,
 }
 
-#[interface(name = "one.playtron.plugin.CloudSaveProvider")]
+#[interface(name = "inc.kora.plugin.CloudSaveProvider")]
 impl CloudSaveProvider {
     // Emitted when the sync has failed
     #[zbus(signal)]
@@ -31,9 +31,9 @@ impl CloudSaveProvider {
     ///
     /// # Example
     ///
-    /// busctl --user call one.playtron.EpicGames \
-    ///   /one/playtron/EpicGames/LegendaryClient0 \
-    ///   one.playtron.plugin.CloudSaveProvider \
+    /// busctl --user call inc.kora.EpicGames \
+    ///   /inc/kora/EpicGames/LegendaryClient0 \
+    ///   inc.kora.plugin.CloudSaveProvider \
     ///   CloudSaveDownload "ssba(sssbas)" "460950" 1 "/path/to/saves"
     async fn cloud_save_download(
         &mut self,
@@ -55,9 +55,9 @@ impl CloudSaveProvider {
     ///
     /// # Example
     ///
-    /// busctl --user call one.playtron.EpicGames \
-    ///   /one/playtron/EpicGames/LegendaryClient0 \
-    ///   one.playtron.plugin.CloudSaveProvider \
+    /// busctl --user call inc.kora.EpicGames \
+    ///   /inc/kora/EpicGames/LegendaryClient0 \
+    ///   inc.kora.plugin.CloudSaveProvider \
     ///   CloudSaveUpload "ssba(sssbas)" "460950" 1 "/path/to/saves"
     async fn cloud_save_upload(
         &mut self,

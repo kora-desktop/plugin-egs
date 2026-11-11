@@ -40,13 +40,13 @@ impl User {
     }
 }
 
-#[interface(name = "one.playtron.auth.User")]
+#[interface(name = "inc.kora.auth.User")]
 impl User {
     /// An url to the avatar image. Empty if no avatar is available.
     ///
-    /// busctl --user get-property one.playtron.EpicGames \
-    ///   /one/playtron/EpicGames/LegendaryClient0 \
-    ///   one.playtron.auth.User \
+    /// busctl --user get-property inc.kora.EpicGames \
+    ///   /inc/kora/EpicGames/LegendaryClient0 \
+    ///   inc.kora.auth.User \
     ///   Avatar
     #[zbus(property)]
     async fn avatar(&self) -> &str {
@@ -59,9 +59,9 @@ impl User {
     ///
     /// # Example
     ///
-    /// busctl --user get-property one.playtron.EpicGames \
-    ///   /one/playtron/EpicGames/LegendaryClient0 \
-    ///   one.playtron.auth.User \
+    /// busctl --user get-property inc.kora.EpicGames \
+    ///   /inc/kora/EpicGames/LegendaryClient0 \
+    ///   inc.kora.auth.User \
     ///   Identifier
     #[zbus(property)]
     async fn identifier(&self) -> String {
@@ -75,9 +75,9 @@ impl User {
     ///
     /// # Example
     ///
-    /// busctl --user get-property one.playtron.EpicGames \
-    ///   /one/playtron/EpicGames/LegendaryClient0 \
-    ///   one.playtron.auth.User \
+    /// busctl --user get-property inc.kora.EpicGames \
+    ///   /inc/kora/EpicGames/LegendaryClient0 \
+    ///   inc.kora.auth.User \
     ///   Status
     #[zbus(property)]
     async fn status(&self) -> i32 {
@@ -94,9 +94,9 @@ impl User {
     ///
     /// # Example
     ///
-    /// busctl --user get-property one.playtron.EpicGames \
-    ///   /one/playtron/EpicGames/LegendaryClient0 \
-    ///   one.playtron.auth.User \
+    /// busctl --user get-property inc.kora.EpicGames \
+    ///   /inc/kora/EpicGames/LegendaryClient0 \
+    ///   inc.kora.auth.User \
     ///   Username
     #[zbus(property)]
     async fn username(&self) -> String {
@@ -115,9 +115,9 @@ impl User {
     /// switching. Returns whether it was possible to re-use that session.
     ///
     /// # Example
-    /// busctl --user call one.playtron.EpicGames \
-    ///   /one/playtron/EpicGames/LegendaryClient0 \
-    ///   one.playtron.auth.User \
+    /// busctl --user call inc.kora.EpicGames \
+    ///   /inc/kora/EpicGames/LegendaryClient0 \
+    ///   inc.kora.auth.User \
     ///   ChangeUser "s" "PlaytronTest1"
     async fn change_user(&self, user_id: String) -> fdo::Result<bool> {
         log::info!("Changing user to {}", user_id);
@@ -137,9 +137,9 @@ impl User {
     ///
     /// # Example
     ///
-    /// busctl --user call one.playtron.EpicGames \
-    ///   /one/playtron/EpicGames/LegendaryClient0 \
-    ///   one.playtron.auth.User \
+    /// busctl --user call inc.kora.EpicGames \
+    ///   /inc/kora/EpicGames/LegendaryClient0 \
+    ///   inc.kora.auth.User \
     ///   Logout "s" "PlaytronTest1"
     async fn logout(&mut self, user_id: String) -> fdo::Result<()> {
         log::info!("Logging out {}", user_id);
